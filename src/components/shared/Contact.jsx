@@ -1,84 +1,58 @@
-import React from "react";
-import { Phone, Mail, MessageCircle, MapPin } from "lucide-react";
-// import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import contactImg from "../../assets/hero.png";
 
 const Contact = () => {
-  // Replace with your actual coordinates
-  const location = {
-    lat: 43.1394, // Example coordinates for Brantford
-    lng: -80.2644,
-  };
-
-  const mapContainerStyle = {
-    width: "100%",
-    height: "100%",
-  };
-
-  const options = {
-    disableDefaultUI: true,
-    zoomControl: true,
-  };
-
   return (
-    <div className="w-full max-w-6xl mx-auto p-4">
-      <div className="grid md:grid-cols-2 gap-6">
-        {/* Contact Information Card */}
-        <div className="bg-white shadow-lg">
-          <div>
-            <div className="text-3xl font-bold">Contact Us</div>
-          </div>
-          <div>
-            <div className="space-y-6">
-              <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-blue-600" />
-                <div>
-                  <p className="font-medium">Phone</p>
-                  <p className="text-gray-600">(647) 648-1808</p>
-                </div>
-              </div>
+    <div className="flex  flex-col-reverse md:flex-row justify-center p-4 md:p-24">
+      <div className="flex flex-col md:flex-row gap-8 p-8 md:p-12 bg-secondary rounded-3xl w-full max-w-4xl">
+        {/* Form Section */}
+        <div className="flex-1 text-white">
+          <h1 className="font-semibold text-2xl md:text-5xl text-[#333333] pb-8">
+            Contact Me
+          </h1>
+          <form action="" className="flex flex-col gap-4">
+            <div className="flex flex-col gap-8 text-colored">
+              <input
+                type="text"
+                id="fullName"
+                name="name"
+                placeholder="Full Name*"
+                className="bg-transparent p-4 rounded-md text-black border bg-white border-[#A8A8A8] placeholder:text-[#A8A8A8] caret-colored"
+              />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email Address*"
+                className="bg-transparent p-4 rounded-md text-black border bg-white border-[#A8A8A8] placeholder:text-[#A8A8A8] caret-colored"
+              />
+              <input
+                type="text"
+                id="phoneNumber"
+                name="phone"
+                placeholder="Phone Number*"
+                className="bg-transparent p-4 rounded-md text-black border bg-white border-[#A8A8A8] placeholder:text-[#A8A8A8] caret-colored"
+              />
 
-              <div className="flex items-center space-x-3">
-                <MessageCircle className="h-5 w-5 text-green-600" />
-                <div>
-                  <p className="font-medium">WhatsApp</p>
-                  <p className="text-gray-600">(647) 648-1808</p>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-red-600" />
-                <div>
-                  <p className="font-medium">Email</p>
-                  <p className="text-gray-600">Elephantcompany@gmail.com</p>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-purple-600" />
-                <div>
-                  <p className="font-medium">Address</p>
-                  <p className="text-gray-600">162 Longboat Run W</p>
-                  <p className="text-gray-600">Brantford, ON N3T 0B8</p>
-                </div>
-              </div>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Message*"
+                className="bg-transparent p-4 rounded-md text-black border bg-white border-[#A8A8A8] placeholder:text-[#A8A8A8] caret-colored h-[156px]"
+              />
             </div>
-          </div>
+            <button className="bg-orange-400 hover:bg-[#B00512] transition-all duration-700 ease-in-out  py-[12px] px-[41px] rounded-lg text-white w-fit font-medium">
+              Submit Now
+            </button>
+          </form>
         </div>
-
-        {/* Map Section */}
-        {/* <div className="h-96 rounded-lg overflow-hidden shadow-lg">
-          <LoadScript googleMapsApiKey="YOUR_GOOGLE_MAPS_API_KEY">
-            <GoogleMap
-              mapContainerStyle={mapContainerStyle}
-              center={location}
-              zoom={15}
-              options={options}
-            >
-              <Marker position={location} />
-            </GoogleMap>
-          </LoadScript>
-        </div> */}
+        {/* Image Section */}
+        <div className="flex-1 flex w-full h-full min-h--[400px] rounded-[30px]">
+          <img
+            src={contactImg}
+            alt="Contact Us"
+            className="w-full  object-cover rounded-[30px] shadow-lg"
+          />
+        </div>
       </div>
     </div>
   );

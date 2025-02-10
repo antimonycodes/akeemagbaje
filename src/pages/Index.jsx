@@ -7,6 +7,7 @@ import Testimonial from "../components/Home/Testimonial";
 import Contact from "../components/shared/Contact";
 import Newsletter from "../components/shared/Newsletter";
 import Projects from "../components/Home/Projects";
+import Blog from "../components/Home/Blog";
 
 const Index = () => {
   return (
@@ -15,7 +16,9 @@ const Index = () => {
       <AboutMe />
       <Services />
       <Projects />
+
       <Testimonial />
+      <Blog />
       <Newsletter />
       <Contact />
     </div>

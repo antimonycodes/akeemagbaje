@@ -26,11 +26,11 @@ const AboutMe = () => {
   };
 
   return (
-    <div className="px-24 py-8 flex items-center justify-between w-full bg-gray-100">
+    <div className="px-4 md:px-24 py-8 flex flex-col md:flex-row items-center justify-between w-full bg-gray-100">
       {/* content */}
-      <div>
-        <h1 className="text-3xl font-bold">About Me</h1>
-        <img src={shape} alt="" width={140} />
+      <div className="mb-8 md:mb-0 md:w-1/2">
+        <h1 className="text-2xl md:text-3xl font-bold">About Me</h1>
+        <img src={shape} alt="" width={140} className=" mb-8" />
 
         <motion.h3
           variants={sentence}
@@ -48,7 +48,7 @@ const AboutMe = () => {
         </motion.h3>
         <Link to="/about">
           <button className="bg-[#FD6F00] border flex items-center gap-2 text-xs text-white px-4 py-2 rounded-lg mt-4 cursor-pointer">
-            Learn More About Me
+            Learn More
             <span>
               <ArrowBigRight />
             </span>
@@ -56,8 +56,12 @@ const AboutMe = () => {
         </Link>
       </div>
       {/* image */}
-      <div>
-        <img src={aboutImg} alt="" />
+      <div className="md:w-1/2 flex justify-center">
+        <img
+          src={aboutImg}
+          alt=""
+          className="w-full h-auto min-h-96 rounded-md object-cover"
+        />
       </div>
     </div>
   );
