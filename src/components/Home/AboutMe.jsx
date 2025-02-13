@@ -1,6 +1,6 @@
 import React from "react";
 import aboutImg from "../../assets/hero.png";
-import { ArrowBigRight } from "lucide-react";
+import { ArrowBigRight, ArrowUpRight } from "lucide-react";
 import shape from "../../assets/shape.svg";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -50,7 +50,7 @@ const AboutMe = () => {
           <button className="bg-[#FD6F00] border flex items-center gap-2 text-xs text-white px-4 py-2 rounded-lg mt-4 cursor-pointer">
             Learn More
             <span>
-              <ArrowBigRight />
+              <ArrowUpRight size={14} />
             </span>
           </button>
         </Link>

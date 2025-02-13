@@ -5,21 +5,15 @@ import shape from "../../assets/shape.svg";
 
 const testimonials = [
   {
-    name: "Sarah",
-    role: "Manager Director",
-    text: "The team provided exceptional legal guidance for our business restructuring. Truly a partner we can rely on!",
+    name: "Council of Ibadan Traditional Baales",
+    // role: "Manager Director",
+    text: "Barr. Akeem Agbaje has consistently shown his belief in the preservation and promotion of Yoruba culture and values. His love for Ibadanland and his generosity toward mankind distinguish him as a leader of excellence. This award is a testament to his remarkable contributions and a call to do even more",
     image: img,
   },
   {
-    name: "John Doe",
-    role: "CEO, TechCorp",
-    text: "Working with this team was a game changer for our startup. Their insights and expertise helped us scale efficiently.",
-    image: img,
-  },
-  {
-    name: "Emily Smith",
-    role: "Project Manager",
-    text: "Incredible experience! The attention to detail and professionalism made all the difference for our project.",
+    name: "the Olubadan, His Imperial Majesty Oba Akinloye Owolabi Olakulehin",
+    // role: "CEO, TechCorp",
+    text: "This award is a testament to Barr Akeem Agbaje’s enduring contributions to our community. His dedication to the welfare of our people and the progress of our land is exemplary",
     image: img,
   },
 ];
@@ -70,17 +64,17 @@ const Testimonial = () => {
             />
           </div>
 
-          <div className="text- mt-6 flex flex-col items- relative">
-            <FaQuoteLeft className="  top-0 left-0 text-orange-500 text-3xl mb-4" />
+          <div className="text- mt- flex flex-col items- relative">
+            <FaQuoteLeft className="  top-0 left-0 text-orange-500 text-3xl mb-2" />
             <p
-              className={`text-gray-700 text-base italic transition-opacity duration-500  ${
+              className={`text-gray-700 text-sm italic transition-opacity duration-500  ${
                 isAnimating ? "opacity-0" : "opacity-100"
               }`}
             >
               "{testimonials[currentIndex].text}"
             </p>
             <h4
-              className={`font-bold text-gray-900 mt-4 transition-opacity duration-500 ${
+              className={`font-bold text-sm text-gray-900 mt-1 transition-opacity duration-500 ${
                 isAnimating ? "opacity-0" : "opacity-100"
               }`}
             >
@@ -93,7 +87,7 @@ const Testimonial = () => {
             >
               {testimonials[currentIndex].role}
             </p>
-            <div className="flex gap-4 mt-6">
+            <div className="flex gap-4 mt-2">
               <button
                 onClick={handlePrevious}
                 disabled={isAnimating}

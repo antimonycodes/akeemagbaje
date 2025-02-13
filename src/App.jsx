@@ -4,6 +4,8 @@ import Index from "./pages/Index";
 import Nav from "./components/Nav";
 import About from "./pages/About";
 import Footer from "./components/shared/Footer";
+import BlogDetails from "./pages/BlogDetails";
+import Blog from "./pages/Blog";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogDetails />} />
       </Routes>
       <Footer />
     </div>

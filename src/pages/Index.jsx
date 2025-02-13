@@ -19,8 +19,8 @@ const Index = () => {
 
       <Testimonial />
       <Blog />
-      <Newsletter />
       <Contact />
+      <Newsletter />
     </div>
   );
 };

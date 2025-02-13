@@ -4,6 +4,9 @@
 
 @theme {
   --font-roboto: "Roboto", sans-serif;
+  /* --color-primary: #c8a549;
+  --color-secondary: #811812;
+  --color-support: #186144; */
 }
 
 .text-stroke {
