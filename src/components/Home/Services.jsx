@@ -48,7 +48,10 @@ const Services = () => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <service.icon className="service-icon w-12 h-12 mb-4 text-[#FD6F00]" />
+                <service.icon
+                  className="service-icon w-12 h-12 mb-4 text-primary
+                "
+                />
                 <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                 <p className="text-gray-600">{service.description}</p>
               </motion.div>

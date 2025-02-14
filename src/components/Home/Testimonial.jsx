@@ -52,7 +52,7 @@ const Testimonial = () => {
       </div>
 
       <div className="flex-1 w-full flex flex-col items-center relative">
-        <div className="relative flex flex-col sm:flex-row w-full gap-4 max-w-lg">
+        <div className="relative flex flex-col sm:flex-row w-full gap-12 max-w-xl">
           <div className="overflow-hidden w-full min-w-[250px]  h-[300px]">
             <img
               key={currentIndex}
@@ -65,7 +65,7 @@ const Testimonial = () => {
           </div>
 
           <div className="text- mt- flex flex-col items- relative">
-            <FaQuoteLeft className="  top-0 left-0 text-orange-500 text-3xl mb-2" />
+            <FaQuoteLeft className="  top-0 left-0 text-primary text-3xl mb-2" />
             <p
               className={`text-gray-700 text-sm italic transition-opacity duration-500  ${
                 isAnimating ? "opacity-0" : "opacity-100"
@@ -87,18 +87,18 @@ const Testimonial = () => {
             >
               {testimonials[currentIndex].role}
             </p>
-            <div className="flex gap-4 mt-2">
+            <div className=" absolute bottom-0 flex gap-4 mt-2">
               <button
                 onClick={handlePrevious}
                 disabled={isAnimating}
-                className="bg-orange-500 text-white p-2 rounded-full hover:bg-orange-600 transition-colors disabled:opacity-50"
+                className="bg-primary text-white p-2 rounded-full hover:bg-orange-600 transition-colors disabled:opacity-50"
               >
                 <FaArrowLeft />
               </button>
               <button
                 onClick={handleNext}
                 disabled={isAnimating}
-                className="bg-orange-500 text-white p-2 rounded-full hover:bg-orange-600 transition-colors disabled:opacity-50"
+                className="bg-primary text-white p-2 rounded-full hover:bg-orange-600 transition-colors disabled:opacity-50"
               >
                 <FaArrowRight />
               </button>

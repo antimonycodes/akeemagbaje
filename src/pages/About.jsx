@@ -35,7 +35,7 @@ const About = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto px-4 pt-32">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row gap-12 items-center mb-16">
             <div className="flex-1">
               <motion.h1
@@ -82,7 +82,7 @@ const About = () => {
             {achievements.map((achievement, index) => (
               <div
                 key={index}
-                className="p-6 text-center bg-white border border-gray-400 rounded-lg shadow-sm"
+                className="p-6 text-center bg-white border border-gray-400  rounded-lg shadow-lg"
               >
                 <achievement.icon className="w-8 h-8 mx-auto mb-4 text-yellow-400" />
                 <div className="text-3xl font-bold mb-2">

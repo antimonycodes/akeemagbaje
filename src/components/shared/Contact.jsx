@@ -3,7 +3,7 @@ import contactImg from "../../assets/hero.png";
 const Contact = () => {
   return (
     <div className="flex  flex-col-reverse md:flex-row justify-center p-4 md:p-24">
-      <div className="flex flex-col md:flex-row gap-8 p-8 md:p-12 bg-secondary rounded-3xl w-full max-w-4xl">
+      <div className="flex flex-col md:flex-row gap-8 p-8 md:p-12 bg-secondar rounded-3xl w-full max-w-4xl">
         {/* Form Section */}
         <div className="flex-1 text-white">
           <h1 className="font-semibold text-2xl md:text-5xl text-[#333333] pb-8">

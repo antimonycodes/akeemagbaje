@@ -140,16 +140,16 @@ const Blog = () => {
         <img src={shape} alt="" width={140} className=" mb-8" />
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-8 mx-auto">
-        {blogs.map((blog, i) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 my-8 mx-auto">
+        {blogs.slice(4).map((blog, i) => (
           <div
             key={i}
-            className="p-1 bg-white w-full flex flex-col gap-4 rounded-2xl hover:shadow-md  hover:-translate-y-2.5 duration-500 transition-all"
+            className="p-6 rounded-lg bg-white w-full flex flex-col gap-4  hover:shadow-lg  hover:-translate-y-2.5 duration-500 transition-all"
           >
             <img
               src={blog.img}
               alt={blog.heading}
-              className="rounded-t-2xl object-cover h-48 w-full"
+              className=" object-cover rounded-lg h-48 w-full"
             />
             <div className="flex flex-col flex-1 px-1 py- pb-6">
               <h2 className="text-xl font-semibold text-[#1D1D1D]">

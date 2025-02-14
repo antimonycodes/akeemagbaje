@@ -16,7 +16,7 @@ const ScrollIndicator = () => {
           stroke="currentColor"
           strokeWidth="2"
         />
-        <circle cx="20" cy="20" r="4" fill="#FD6F00">
+        <circle cx="20" cy="20" r="4" fill="#811812">
           <animate
             attributeName="cy"
             values="20;40;20"
@@ -38,5 +38,9 @@ const ScrollIndicator = () => {
     </div>
   );
 };
+
+//  --color-primary: #c8a549;
+//   --color-secondary: #811812;
+//   --color-support: #186144;
 
 export default ScrollIndicator;
