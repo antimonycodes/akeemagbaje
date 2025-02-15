@@ -132,7 +132,7 @@ const Blog = () => {
   };
 
   return (
-    <div className="px-4 md:px-24 py-4 mb-6">
+    <div className="px-4 md:px-32 py-24 mb-6">
       <div className=" flex items-center flex-col justify-center">
         <h1 className="text-2xl md:text-3xl font-medium text-center text-black">
           Blog
@@ -152,10 +152,13 @@ const Blog = () => {
               className=" object-cover rounded-lg h-48 w-full"
             />
             <div className="flex flex-col flex-1 px-1 py- pb-6">
-              <h2 className="text-xl font-semibold text-[#1D1D1D]">
-                {blog.heading.slice(0, 40)}...
-              </h2>
-              <p className=" text-gray-400 text-[14px] font-light mb-4">
+              <div className=" flex gap-3 mb-4">
+                <div className=" bg-primary h-full w-1.5"></div>
+                <h2 className="text-xl font-semibold text-[#1D1D1D]">
+                  {blog.heading.slice(0, 35)}...
+                </h2>
+              </div>
+              <p className=" text-gray-400 text-[14px] font- mb-4">
                 {blog.paragraph.slice(0, 72)}...
               </p>
               <div className=" flex justify-between items-center">
@@ -172,7 +175,7 @@ const Blog = () => {
                 ></div>
               </div> */}
                 <div
-                  className="mt-auto cursor-pointer transition-all duration-700 ease-in-out text-orange-500 flex items-center gap-1 "
+                  className="mt-auto cursor-pointer transition-all duration-700 ease-in-out text-primary flex items-center gap-1 "
                   onClick={() => handleReadMore(blog)}
                 >
                   <p

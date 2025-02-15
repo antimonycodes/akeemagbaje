@@ -8,6 +8,8 @@ import Contact from "../components/shared/Contact";
 import Newsletter from "../components/shared/Newsletter";
 import Projects from "../components/Home/Projects";
 import Blog from "../components/Home/Blog";
+import Gallery from "../components/Home/Gallery";
+import BentoGrid from "../components/Home/BentoGrid";
 
 const Index = () => {
   return (
@@ -15,7 +17,9 @@ const Index = () => {
       <Hero />
       <AboutMe />
       <Services />
-      <Projects />
+      {/* <Projects /> */}
+      {/* <Gallery /> */}
+      <BentoGrid />
 
       <Testimonial />
       <Blog />

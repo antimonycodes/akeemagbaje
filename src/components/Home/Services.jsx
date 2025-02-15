@@ -7,28 +7,28 @@ const Services = () => {
     {
       icon: Gavel,
       title: "Legal Expertise",
-      description: "Specialized in constitutional and corporate law",
+      description: "Specialized in constitutional and corporate law.",
     },
     {
       icon: Users,
       title: "Political Advocacy",
-      description: "Champion for community rights and social justice",
+      description: "Champion for community rights and social justice.",
     },
     {
       icon: Scale,
       title: "Ethical Leadership",
-      description: "Committed to transparency and integrity",
+      description: "Committed to transparency and integrity.",
     },
     {
       icon: MessageSquare,
       title: "Public Speaking",
-      description: "Engaging orator for various forums and events",
+      description: "Engaging orator for various forums and events.",
     },
   ];
   return (
     <div>
-      <section className="  bg-gray-100 py-8">
-        <div className="container mx-auto px-6">
+      <section className="  bg-gray-100 py-24">
+        <div className=" px-32">
           <div className=" text-center flex items-center justify-center">
             <div>
               <h1 className=" text-3xl font-bold text-center">Services</h1>
@@ -44,7 +44,7 @@ const Services = () => {
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
-                className="bg-white p-6 rounded-lg shadow-lg"
+                className="bg-white p-6 rounded-2xl shadow-lg"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >

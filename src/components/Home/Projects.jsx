@@ -20,7 +20,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className=" px-4 md:px-16 py-12">
+    <div className=" px-4 md:px-32 py-12">
       <div className=" flex items-center justify-center">
         <div>
           <h1 className="text-2xl md:text-3xl font-medium text-center text-black">
@@ -37,7 +37,7 @@ const Projects = () => {
           >
             <img src={card.img} alt="Campaign" className="rounded-md" />
             <h2 className="text-base md:text-xl text-[#1D1D1D]  font-medium">
-              {card.heading}
+              {card.heading}s{" "}
             </h2>
 
             <motion.div

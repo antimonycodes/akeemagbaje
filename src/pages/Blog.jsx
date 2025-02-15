@@ -37,7 +37,7 @@ const Blog = () => {
                   {blog.heading.slice(0, 45)}...
                 </h2>
               </div>
-              <p className="text-gray-800 text-[14px] font-normal pb-6">
+              <p className="text-gray-400 text-[14px] font-normal pb-6">
                 {blog.paragraph.slice(0, 78)}...
               </p>
               <p className="text-[#717171] text-xs mb-4">{blog.createdAt}</p>

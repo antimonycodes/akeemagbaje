@@ -34,7 +34,7 @@ const About = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto px-4 pt-32">
+      <div className=" mx-auto px-4 pt-32">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row gap-12 items-center mb-16">
             <div className="flex-1">

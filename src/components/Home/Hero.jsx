@@ -49,7 +49,9 @@
 // export default Hero;
 
 import React from "react";
-import herobg from "../../assets/hero.png";
+import heroImg from "../../assets/white-agbada.jpg";
+// import heroImg from "../../assets/agbaje-green.jpg";
+
 import ScrollIndicator from "./ScrollIndicator";
 import { Linkedin, Twitter, Instagram } from "lucide-react";
 import { PiTiktokLogoBold } from "react-icons/pi";
@@ -63,8 +65,8 @@ const Hero = () => {
   ];
 
   return (
-    <div className="w-full h-screen max-h-screen bg-black/20 flex flex-col items-center justify-center pt-32 relative overflow-hidden">
-      <img
+    <div className="w-full h-screen  bg-black/20 flex items-center justify-between px-32 pt-28 pb-12 relative overflow-hidden">
+      {/* <img
         src={herobg}
         alt=""
         className="absolute w-full h-full object-cover"
@@ -75,22 +77,55 @@ const Hero = () => {
         <h1 className="text-xl md:text-2xl font-semibold mt-4">
           Distinguished Legal Practitioner | Entrepreneur | Political Leader
         </h1>
+      </div> */}
+      {/* Text */}
+      <div className=" py-0 text-cente space-y-8">
+        <h1 className=" text-5xl font-bold">I am Akeem Agbaje</h1>
+        {/* occupation */}
+        <div className=" flex items-center gap-2">
+          <p className="text-xl font-medium text-gray-600">
+            Legal Practitioner
+          </p>
+          <div className=" h-6 w-1 bg-primary"></div>
+          <p className="text-xl font-medium text-gray-600">Entrepreneur</p>
+          <div className=" h-6 w-1 bg-primary"></div>
+
+          <p className="text-xl font-medium text-gray-600">Political Leader</p>
+        </div>
+        {/* social links */}
+        {/* <div className=" bg-suppor p-2 rounded-2xl  flex items-center justify-center gap-4 z-10">
+          {socialLinks.map((social, index) => (
+            <a
+              key={index}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-primary transition-colors"
+            >
+              <social.icon className="h-6 w-6 md:h-8 md:w-8" />
+            </a>
+          ))}
+        </div> */}
+        {/* cta buttons */}
+        <div className=" flex justify-betwee gap-3">
+          <button className=" py-2 px-6 rounded-lg bg-secondary text-white font-semibold">
+            Contact Me
+          </button>
+          <button className=" py-2 px-6 rounded-lg border-2 border-secondary text-white font-semibold">
+            Download CV
+          </button>
+        </div>
+      </div>
+      {/* Image */}
+      <div className=" size-[500px]">
+        <img
+          src={heroImg}
+          alt=""
+          className=" w-full h-full object-cover rounded-2xl"
+        />
       </div>
       <div className="flex items-center justify-center absolute bottom-4 w-full z-10">
-        <ScrollIndicator />
-      </div>
-      <div className="absolute bg-suppor p-2 rounded-2xl right-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 z-10">
-        {socialLinks.map((social, index) => (
-          <a
-            key={index}
-            href={social.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-primary transition-colors"
-          >
-            <social.icon className="h-6 w-6 md:h-8 md:w-8" />
-          </a>
-        ))}
+        {/* <ScrollIndicator /> */}
       </div>
     </div>
   );

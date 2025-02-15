@@ -96,7 +96,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#272727] text-gray-300 py-8">
+    <footer className="bg-[#272727] text-gray-300 py-8 pt-40">
       {/* Navigation Links */}
       <div className="flex flex-wrap justify-center space-x-4 md:space-x-6 mb-6">
         {navLinks.map((link) => (
