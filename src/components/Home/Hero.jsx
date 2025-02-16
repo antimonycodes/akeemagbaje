@@ -97,12 +97,12 @@ const Hero = () => {
           <button className=" w-fit py-2 px-6 rounded-lg cursor-pointer bg-secondary text-white font-semibold">
             Contact Me
           </button>
-          <button className=" w-fit py-2 px-6 rounded-lg border-2 cursor-pointer border-secondary text-white font-semibold">
+          {/* <button className=" w-fit py-2 px-6 rounded-lg border-2 cursor-pointer border-secondary text-white font-semibold">
             Download CV
-          </button>
+          </button> */}
         </div>
         {/* social links */}{" "}
-        <div className=" bg-suppor p-2 rounded-2xl  flex items-center justify- gap-4 z-10">
+        <div className="mx-0 bg-suppor p rounded-2xl  flex items-center justify- gap-4 z-10">
           {socialLinks.map((social, index) => (
             <a
               key={index}

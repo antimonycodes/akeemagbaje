@@ -23,7 +23,9 @@ const Index = () => {
 
       <Testimonial />
       <Blog />
-      <Contact />
+      <div id="contact">
+        <Contact />
+      </div>
       <Newsletter />
     </div>
   );

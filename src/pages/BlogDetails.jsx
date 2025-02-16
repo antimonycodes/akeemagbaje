@@ -11,11 +11,11 @@ const BlogDetails = () => {
   return (
     <div className=" bg-gray-100 py-24">
       <div className="px-4 md:px-24 py-4 mb-16 mt-12 ">
-        <div className=" px-24">
+        <div className=" px- md:px-24">
           <Breadcrumbs />
         </div>
         <div className="  flex items-center justify-center">
-          <h1 className="text-3xl md:text-4xl xl:text-5xl font-bold text-center lg:max-w-[75%]  text-black">
+          <h1 className="text-2xl md:text-4xl xl:text-5xl font-bold md:text-center lg:max-w-[75%]  text-black">
             {blog.heading}
           </h1>
         </div>
