@@ -26,12 +26,12 @@ const BlogHeader = ({ blogs }) => {
       className="relative rounded-3xl w-full h-screen bg-cover bg-no-repeat bg-center flex items-center justify-center transition-all duration-500 ease-in-out"
       style={{ backgroundImage: `url(${blogs[currentIndex].img})` }}
     >
-      <div className="absolute bottom-12 left-24 bg-white w-[40%] bg-opacity-75 p-6 rounded-2xl shadow-lg text-">
-        <h1 className="text-2xl md:text-3xl font-medium text-black mb-4">
+      <div className="absolute bottom-12 left-4 lg:left-24 bg-white w-[90%] lg:w-[40%] bg-opacity-75 p-6 rounded-2xl shadow-lg text-">
+        <h1 className="text-xl md:text-2xl lg:text-3xl font-medium text-black mb-4">
           {blogs[currentIndex].heading}
         </h1>
         <div
-          className="mt-auto transition-all duration-700 ease-in-out text-orange-500 flex items-center gap-1 cursor-pointer"
+          className="mt-auto transition-all duration-700 ease-in-out text-primary flex items-center gap-1 cursor-pointer"
           onClick={handleReadMore}
         >
           <p className="text-xs font-semibold">Read post</p>

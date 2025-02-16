@@ -53,15 +53,15 @@ import heroImg from "../../assets/white-agbada.jpg";
 // import heroImg from "../../assets/agbaje-green.jpg";
 
 import ScrollIndicator from "./ScrollIndicator";
-import { Linkedin, Twitter, Instagram } from "lucide-react";
+import { Linkedin, Twitter, Instagram, Facebook } from "lucide-react";
 import { PiTiktokLogoBold } from "react-icons/pi";
 
 const Hero = () => {
   const socialLinks = [
-    { icon: Linkedin, href: "https://linkedin.com" },
-    { icon: Twitter, href: "https://twitter.com" },
-    { icon: Instagram, href: "https://instagram.com" },
-    { icon: PiTiktokLogoBold, href: "https://tiktok.com" },
+    { icon: Facebook, href: "https://facebook.com/Barrister Akeem Agbaje" },
+    { icon: Twitter, href: "https://twitter.com/AkeemAAgbaje" },
+    { icon: Instagram, href: "https://instagram.com/akeemaagbaje" },
+    { icon: PiTiktokLogoBold, href: "https://tiktok.com/akeemaagbaje" },
   ];
 
   return (
