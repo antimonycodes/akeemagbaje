@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { BlogContext } from "../context/BlogContext";
 import BlogHeader from "../components/Blog/BlogHeader";
 import { ArrowUpRight } from "lucide-react";
+import Breadcrumbs from "../components/shared/Breadcrumbs";
 
 const Blog = () => {
   const { blogs } = useContext(BlogContext);
@@ -15,6 +16,8 @@ const Blog = () => {
 
   return (
     <div className=" max-w-7xl px-4 mx-auto py-4 mt-28">
+      <Breadcrumbs />
+
       {blogs.length > 0 && <BlogHeader blogs={blogs} />}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-8 mx-auto">

@@ -28,7 +28,7 @@ const AboutMe = () => {
   };
 
   return (
-    <div className="px-4 md:px-32 py-24 flex flex-col md:flex-row items-center justify-between w-full bg-gray-100">
+    <div className="px-4 md:px-32 py-6 lg:py-24 flex flex-col md:flex-row items-center justify-between w-full bg-gray-100">
       {/* content */}
       <div className="mb-8 md:mb-0 md:w-1/2">
         <h1 className="text-2xl md:text-3xl font-bold">About Me</h1>
@@ -38,7 +38,7 @@ const AboutMe = () => {
           variants={sentence}
           initial="hidden"
           animate="visible"
-          className="text-lg max-w-[79%]"
+          className="text-lg md:max-w-[79%]"
         >
           {"With over three decades of experience in legal practice, I specialize in corporate and public law, while also playing a significant role in the energy sector and Oyo State politics."
             .split("")
@@ -58,7 +58,7 @@ const AboutMe = () => {
         </Link>
       </div>
       {/* image */}
-      <div className="w-[500px] flex justify-center">
+      <div className="size-[320px] lg:size-[500px] flex justify-center">
         <img
           src={img}
           alt=""

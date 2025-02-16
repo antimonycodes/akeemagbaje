@@ -44,19 +44,21 @@ const Testimonial = () => {
   return (
     <div className=" relati py-12 px-4 md:px-32">
       <div className="  flex flex-col items-center justify-center pb-12">
-        <h3 className="text-3xl text-black font-bold">Testimonials</h3>
+        <h3 className=" text-2xl lg:text-3xl text-black font-bold">
+          Testimonials
+        </h3>
         <img src={shape} alt="" width={180} />
       </div>
       <div className=" ve flex flex-col md:flex-row items-cente justify-between">
         <div className="md:w-1/4 text-left mb-8 md:mb-0">
-          <h2 className="text-3xl text-center font-medium text-black mt-2">
+          <h2 className=" text-xl md:text-3xl text-center font-medium text-black mt-2">
             Hear what people say about me.
           </h2>
           {/* <div className="mt-4 h-1 w-24 bg-gray-200"></div> */}
         </div>
 
         <div className="flex-1 w-full flex flex-col items-center relative">
-          <div className="relative flex flex-col sm:flex-row w-full gap-12 max-w-xl">
+          <div className="relative flex flex-col sm:flex-row w-full gap-6 md:gap-12 max-w-xl">
             <div className="overflow-hidden w-full min-w-[250px]  h-[300px]">
               <img
                 key={currentIndex}
@@ -91,7 +93,7 @@ const Testimonial = () => {
               >
                 {testimonials[currentIndex].role}
               </p>
-              <div className=" absolute bottom-0 flex gap-4 mt-2">
+              <div className=" absolute -bottom-8 flex gap-4 mt-2">
                 <button
                   onClick={handlePrevious}
                   disabled={isAnimating}

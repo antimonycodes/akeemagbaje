@@ -9,7 +9,7 @@ import img7 from "../../assets/image7.jpeg";
 
 const Gallery = () => {
   return (
-    <div className=" mt-8 text-center px- md:px-32 ">
+    <div className=" mt-8 text-center px-4 md:px-32 ">
       <div>
         <h2 className=" text-2xl md:text-5xl font-medium leading-tight text-gray-900 mb-8">
           Gallery

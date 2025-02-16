@@ -162,7 +162,7 @@ import imgEight from "../../assets/image15.jpeg";
 
 const BentoGrid = () => {
   return (
-    <div className="max-w-full px-32 py-24">
+    <div className="max-w-full px-4 md:px-32 py-6 md:py-24">
       <div className="flex items-center justify-center">
         <div>
           <h1 className="text-2xl md:text-3xl font-medium text-center text-black">
@@ -171,7 +171,7 @@ const BentoGrid = () => {
           <img src={shape} alt="" width={150} />
         </div>
       </div>
-      <div className="mx-auto px-4 py-12">
+      <div className="mx-auto px- py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {/* Large Image */}
           <div className="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group">

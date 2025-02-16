@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Newsletter = () => {
   return (
-    <section className="relative -bottom-32 mx-auto max-w-7xl py-20 px-24 rounded-2xl bg-secondary text-white">
+    <section className="relative mx-4 -bottom-32 mx-auto max-w-7xl py-6 lg:py-20 px-4 md:px-24 rounded-2xl bg-secondary text-white">
       <div className="flex flex-col md:flex-row justify-between items-center px-4">
         <div className="md:basis-[50%] mb-8 md:mb-0">
           <motion.h2
@@ -27,7 +27,7 @@ const Newsletter = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="flex-grow flex items-center py-2 px-2 bg-white rounded-full border border-white focus-within:ring-2 focus-within:ring-white w-[70%]">
+            <div className="flex-grow flex items-center py-2 px-2 bg-white rounded-full border border-white focus-within:ring-2 focus-within:ring-white">
               <input
                 type="email"
                 name="email"

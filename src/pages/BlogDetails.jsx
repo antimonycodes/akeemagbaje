@@ -2,20 +2,34 @@
 import { div } from "framer-motion/client";
 import React from "react";
 import { useLocation } from "react-router-dom";
+import Breadcrumbs from "../components/shared/Breadcrumbs";
 
 const BlogDetails = () => {
   const location = useLocation();
   const { blog } = location.state;
 
   return (
-    <div className=" bg-orange-600 py-24">
-      <div className="px-4 md:px-24 py-4 mb-16 mt- ">
-        <h1 className="text-2xl md:text-3xl font-medium text-center text-black">
-          {blog.heading}
-        </h1>
-        <img src={blog.img} alt={blog.heading} className="w-full h-auto my-4" />
-        <p className="text-gray-700 text-base">{blog.paragraph}</p>
-        <p className="text-[#717171] text-xs mt-4">{blog.createdAt}</p>
+    <div className=" bg-gray-100 py-24">
+      <div className="px-4 md:px-24 py-4 mb-16 mt-12 ">
+        <div className=" px-24">
+          <Breadcrumbs />
+        </div>
+        <div className="  flex items-center justify-center">
+          <h1 className="text-3xl md:text-4xl xl:text-5xl font-bold text-center lg:max-w-[75%]  text-black">
+            {blog.heading}
+          </h1>
+        </div>
+        <div className=" w-full max-w-5xl mx-auto h-[30rem] lg:h-[40rem]">
+          <img
+            src={blog.img}
+            alt={blog.heading}
+            className="w-full h-full object-cover my-4"
+          />
+        </div>
+      </div>
+      <div className=" flex items-center justify-center px-6 lg:px-60 leading-4.5">
+        <p className="text-gray-700 text-lg">{blog.paragraph}</p>
+        {/* <p className="text-[#717171] text-xs mt-4">{blog.createdAt}</p> */}
       </div>
     </div>
   );

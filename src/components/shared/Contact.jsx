@@ -4,7 +4,7 @@ import shape from "../../assets/shape.svg";
 const Contact = () => {
   return (
     <div className="flex  flex-col-reverse md:flex-row justify-center p-4 md:p-2">
-      <div className="flex flex-col md:flex-row gap-8 p-8 md:p-12 bg-secondar rounded-3xl w-full max-w-4xl">
+      <div className="flex flex-col md:flex-row gap-8 p- md:p-12 bg-secondar rounded-3xl w-full max-w-4xl">
         {/* Form Section */}
         <div className="flex-1 text-white">
           <div className=" flex flex-col items-center justify-center mb-8">

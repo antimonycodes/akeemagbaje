@@ -65,7 +65,7 @@ const Hero = () => {
   ];
 
   return (
-    <div className="w-full h-screen  bg-black/20 flex items-center justify-between px-32 pt-28 pb-12 relative overflow-hidden">
+    <div className="w-full h-scree  bg-black/20 flex flex-col md:flex-row items-center justify-between gap-24 px-6 lg:px-32 pt-28 pb-12 relative overflow-hidden">
       {/* <img
         src={herobg}
         alt=""
@@ -79,21 +79,30 @@ const Hero = () => {
         </h1>
       </div> */}
       {/* Text */}
-      <div className=" py-0 text-cente space-y-8">
-        <h1 className=" text-5xl font-bold">I am Akeem Agbaje</h1>
+      <div className=" pt-12 md:pt-0 text-cente space-y-3 lg:space-y-8">
+        <h1 className=" text-3xl md:text-5xl font-bold">I am Akeem Agbaje</h1>
         {/* occupation */}
-        <div className=" flex items-center gap-2">
+        <div className=" flex items-center flex-wrap gap-2">
           <p className="text-xl font-medium text-gray-600">
             Legal Practitioner
           </p>
-          <div className=" h-6 w-1 bg-primary"></div>
+          <div className=" h-6 w-1 bg-primary "></div>
           <p className="text-xl font-medium text-gray-600">Entrepreneur</p>
-          <div className=" h-6 w-1 bg-primary"></div>
+          <div className=" h-6 w-1 bg-primary "></div>
 
           <p className="text-xl font-medium text-gray-600">Political Leader</p>
         </div>
-        {/* social links */}
-        {/* <div className=" bg-suppor p-2 rounded-2xl  flex items-center justify-center gap-4 z-10">
+        {/* cta buttons */}
+        <div className=" flex flex- md:flex-row justify-betwee gap-3">
+          <button className=" w-fit py-2 px-6 rounded-lg cursor-pointer bg-secondary text-white font-semibold">
+            Contact Me
+          </button>
+          <button className=" w-fit py-2 px-6 rounded-lg border-2 cursor-pointer border-secondary text-white font-semibold">
+            Download CV
+          </button>
+        </div>
+        {/* social links */}{" "}
+        <div className=" bg-suppor p-2 rounded-2xl  flex items-center justify- gap-4 z-10">
           {socialLinks.map((social, index) => (
             <a
               key={index}
@@ -105,19 +114,10 @@ const Hero = () => {
               <social.icon className="h-6 w-6 md:h-8 md:w-8" />
             </a>
           ))}
-        </div> */}
-        {/* cta buttons */}
-        <div className=" flex justify-betwee gap-3">
-          <button className=" py-2 px-6 rounded-lg bg-secondary text-white font-semibold">
-            Contact Me
-          </button>
-          <button className=" py-2 px-6 rounded-lg border-2 border-secondary text-white font-semibold">
-            Download CV
-          </button>
         </div>
       </div>
       {/* Image */}
-      <div className=" size-[500px]">
+      <div className=" size-[320px] lg:size-[500px] pb-">
         <img
           src={heroImg}
           alt=""
