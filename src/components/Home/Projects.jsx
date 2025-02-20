@@ -11,11 +11,11 @@ const Projects = () => {
     },
     {
       img: campaignsImg,
-      heading: "Project CDS ",
+      heading: "Project CDS",
     },
     {
       img: campaignsImg,
-      heading: "BeatNTDs ",
+      heading: "BeatNTDs",
     },
   ];
 
