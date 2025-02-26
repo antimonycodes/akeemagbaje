@@ -26,30 +26,32 @@ const Blog = () => {
             key={i}
             className="p-1 hover:bg-white  w-full flex flex-col gap-4 rounded-2xl shadow-lg hover:-translate-y-2.5 duration-500 transition-all"
           >
-            <div className=" h-52 w-full">
+            <div className=" h-62 w-full">
               <img
                 src={blog.img}
                 alt={blog.heading}
-                className="rounded-t-2xl object-top object-cover h-full w-full"
+                className="rounded-2xl object-top object-cover h-full w-full"
               />
             </div>
             <div className="flex flex-col flex-1 px-1 py- pb-6">
               <div className=" flex gap-3 mb-4">
                 <div className=" bg-primary h-full w-1.5"></div>
                 <h2 className="text-xl font-semibold text-[#1D1D1D]">
-                  {blog.heading.slice(0, 45)}...
+                  {blog.heading.slice(0, 40)}...
                 </h2>
               </div>
               <p className="text-gray-400 text-[14px] font-normal pb-6">
                 {blog.paragraph.slice(0, 78)}...
               </p>
-              <p className="text-[#717171] text-xs mb-4">{blog.createdAt}</p>
-              <div
-                className="mt-auto transition-all duration-700 ease-in-out text-primary flex items-center gap-1 hover:gap-2 cursor-pointer"
-                onClick={() => handleReadMore(blog)}
-              >
-                <p className="text-xs font-semibold">Read post</p>
-                <ArrowUpRight size={14} />
+              <div className=" flex justify-between items-center">
+                <p className="text-[#717171] text-xs ">{blog.createdAt}</p>
+                <div
+                  className=" transition-all duration-700 ease-in-out text-primary flex items-center gap-1 hover:gap-2 cursor-pointer"
+                  onClick={() => handleReadMore(blog)}
+                >
+                  <p className="text-xs font-semibold">Read post</p>
+                  <ArrowUpRight size={14} />
+                </div>
               </div>
             </div>
           </div>

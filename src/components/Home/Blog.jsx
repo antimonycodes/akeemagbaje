@@ -49,7 +49,7 @@ const Blog = () => {
               <div className="flex justify-between items-center">
                 <p className="text-[#717171] text-xs">{blog.createdAt}</p>
                 <div
-                  className="mt-auto cursor-pointer transition-all duration-700 ease-in-out text-primary flex items-center gap-1"
+                  className="mt-auto cursor-pointer transition-all duration-700 ease-in-out text-primary flex items-center gap-1 hover:gap-2"
                   onClick={() => handleReadMore(blog)}
                 >
                   <p className="text-xs font-semibold">Read post</p>

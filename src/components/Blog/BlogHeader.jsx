@@ -1,60 +1,3 @@
-// import React from "react";
-// import { useNavigate } from "react-router-dom";
-// import { ArrowUpRight } from "lucide-react";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Autoplay, EffectFade } from "swiper/modules";
-// import "swiper/css";
-// import "swiper/css/effect-fade";
-// import "swiper/css/autoplay";
-
-// const BlogHeader = ({ blogs }) => {
-//   const navigate = useNavigate();
-
-//   const handleReadMore = (blog) => {
-//     navigate(`/blog/${blog.id}`, { state: { blog } });
-//   };
-
-//   return (
-//     <div className="relative w-full h-screen">
-//       <Swiper
-//         modules={[Autoplay, EffectFade]}
-//         effect="fade"
-//         autoplay={{ delay: 5000, disableOnInteraction: false }}
-//         loop={true}
-//         className="w-full h-full"
-//       >
-//         {blogs.map((blog, index) => (
-//           <SwiperSlide key={index} className="relative w-full h-full">
-//             <img
-//               src={blog.img}
-//               alt={blog.heading}
-//               className="w-full h-full object-cover"
-//             />
-//             {/* Overlay */}
-//             <div className="absolute inset-0 bg-black/40"></div>
-
-//             {/* Content Box */}
-//             <div className="absolute bottom-12 left-4 lg:left-24 bg-white w-[90%] lg:w-[40%] bg-opacity-90 p-6 rounded-2xl shadow-lg">
-//               <h1 className="text-xl md:text-2xl lg:text-3xl font-medium text-black mb-4">
-//                 {blog.heading}
-//               </h1>
-//               <div
-//                 className="mt-auto transition-all duration-700 ease-in-out text-primary flex items-center gap-1 cursor-pointer"
-//                 onClick={() => handleReadMore(blog)}
-//               >
-//                 <p className="text-xs font-semibold">Read post</p>
-//                 <ArrowUpRight size={14} />
-//               </div>
-//             </div>
-//           </SwiperSlide>
-//         ))}
-//       </Swiper>
-//     </div>
-//   );
-// };
-
-// export default BlogHeader;
-
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
@@ -92,25 +35,34 @@ const BlogHeader = ({ blogs }) => {
 
   return (
     <div className="relative rounded-3xl w-full h-screen overflow-hidden">
-      {/* Current slide */}
+      {/* Current slide - Using direct image element with object-position:top */}
       <div
-        className={`absolute inset-0 bg-cover bg-no-repeat bg-center transition-opacity duration-700 ease-in-out ${
+        className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
           isTransitioning ? "opacity-100" : "opacity-100"
         }`}
-        style={{
-          backgroundImage: `url(${blogs[currentIndex].img})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-        }}
-      />
+      >
+        <img
+          src={blogs[currentIndex].img}
+          alt={blogs[currentIndex].heading}
+          className="w-full h-full object-cover object-top"
+        />
+      </div>
 
-      {/* Previous slide (for transition effect) */}
+      {/* Previous slide - Using direct image element with object-position:top */}
       <div
-        className={`absolute inset-0 bg-cover bg-no-repeat bg-center transition-opacity duration-700 ease-in-out ${
+        className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
           isTransitioning ? "opacity-0" : "opacity-0"
         }`}
-        style={{ backgroundImage: `url(${blogs[prevIndex].img})` }}
-      />
+      >
+        <img
+          src={blogs[prevIndex].img}
+          alt={blogs[prevIndex].heading}
+          className="w-full h-full object-cover object-top"
+        />
+      </div>
+
+      {/* Optional overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/20"></div>
 
       {/* Content box with fade-in effect */}
       <div
@@ -142,7 +94,13 @@ const BlogHeader = ({ blogs }) => {
               index === currentIndex
                 ? "w-8 bg-secondary"
                 : "w-2 bg-white bg-opacity-50"
-            }`}
+            } cursor-pointer`}
+            onClick={() => {
+              setPrevIndex(currentIndex);
+              setCurrentIndex(index);
+              setIsTransitioning(true);
+              setTimeout(() => setIsTransitioning(false), 700);
+            }}
           />
         ))}
       </div>
