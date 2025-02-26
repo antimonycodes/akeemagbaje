@@ -24,13 +24,13 @@ const Blog = () => {
         {blogs.map((blog, i) => (
           <div
             key={i}
-            className="p-1 hover:bg-white  w-full flex flex-col gap-4 rounded-2xl hover:shadow-md hover:-translate-y-2.5 duration-500 transition-all"
+            className="p-1 hover:bg-white  w-full flex flex-col gap-4 rounded-2xl shadow-lg hover:-translate-y-2.5 duration-500 transition-all"
           >
-            <div className=" h-48 w-full">
+            <div className=" h-52 w-full">
               <img
                 src={blog.img}
                 alt={blog.heading}
-                className="rounded-t-2xl object-cover h-full w-full"
+                className="rounded-t-2xl object-top object-cover h-full w-full"
               />
             </div>
             <div className="flex flex-col flex-1 px-1 py- pb-6">
@@ -45,7 +45,7 @@ const Blog = () => {
               </p>
               <p className="text-[#717171] text-xs mb-4">{blog.createdAt}</p>
               <div
-                className="mt-auto transition-all duration-700 ease-in-out text-primary flex items-center gap-1 cursor-pointer"
+                className="mt-auto transition-all duration-700 ease-in-out text-primary flex items-center gap-1 hover:gap-2 cursor-pointer"
                 onClick={() => handleReadMore(blog)}
               >
                 <p className="text-xs font-semibold">Read post</p>

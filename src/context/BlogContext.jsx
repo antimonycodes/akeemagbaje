@@ -1,12 +1,12 @@
 // filepath: /src/context/BlogContext.jsx
 import React, { createContext, useState } from "react";
-import blogImgOne from "../assets/sitting.jpg";
-import blogImgTwo from "../assets/image1.jpeg";
+import blogImgOne from "../assets/aaimg4.jpg";
+import blogImgTwo from "../assets/aaimg3.jpg";
 import blogImgFour from "../assets/image6.jpeg";
 import blogImgThree from "../assets/image3.jpeg";
-import blogImgFive from "../assets/withArtwork.webp";
-import blogImgSix from "../assets/onsuit.jpg";
-import blogImgSeven from "../assets/agbaje-hand-on-chin.jpg";
+import blogImgFive from "../assets/aaimg6.jpg";
+import blogImgSix from "../assets/aaimg5.jpg";
+import blogImgSeven from "../assets/aaimg9.jpg";
 
 const BlogContext = createContext();
 
@@ -28,8 +28,7 @@ const BlogProvider = ({ children }) => {
       img: blogImgTwo,
       heading:
         "Governance is more than Window Dressing - APC Chieftain Carpets Makinde",
-      paragraph:
-        "This is a random paragraph im trying to test lorem ipsum trying to test lorem ipsum trying to test lorem ipsum",
+      paragraph: `Chieftain of the All Progressives’ Congress in Oyo State, Barrister Akeem Agbaje has carpeted the incumbent government of Gov. Seyi Makinde in Oyo State. The seasoned lawyer cum politician berated the government for engaging in surface scratching instead of thorough infrastructural development that could transform the fortunes of the state for the better. Agbaje made the assertion while featuring on a radio programme in Ibadan. Agbaje noted that, government is like a system and a cycle that must be completed. “You cannot jump one aspect and expect results on the other. They are intertwined. According to him, the upgrading of Ibadan Airport to international standard seems a misguided priority. "While it is good to have had the upgrade even before now, it is important to note that, Ibadan does not have the business hub that could fetch the required international passengers’ traffic yet. Government should have addressed that before embarking on the upgrade. That is one of the undoings of Gov. Makinde."“Governance is more than surface scratching as is being experienced in Oyo state under Gov. Makinde. Infrastructural development is key to economic prosperity. Under these infrastructural drives, there are also some priority areas. It is like a sequence, one after the other. This is failing under the present governor of the state. The derelict state of secondary schools across the state are not encouraging, ditto for our healthcare system and others that should be subject to critical analysis.”Agbaje believes that Oyo state can have it better than the present state of things if capable hands are given the opportunity to run the economically prosperous state.`,
       createdAt: "15, Sep, 2024",
       current: 50,
       total: 100,
@@ -39,8 +38,8 @@ const BlogProvider = ({ children }) => {
       img: blogImgThree,
       heading:
         "Chief Bisi Akande, A Pillar Of Progressivism, Agbaje Congratulates Chief Bisi Akande On His 86th Birthday",
-      paragraph:
-        "This is a random paragraph im trying to test lorem ipsum trying to test lorem ipsum trying to test lorem ipsum",
+      paragraph: `
+        Barr. Akeem Agbaje, a chieftain of the All Progressives Congress (APC) in Oyo State, has extended warm congratulations to Chief Bisi Akande, the national leader, first National Chairman of the APC and former Governor of Osun State, on the occasion of his 86th birthday. In a statement issued by his media office, Agbaje described Chief Bisi Akande as a courageous and principled leader whose life and career have been dedicated to the service of the nation and the promotion of progressive ideals.“Baba Akande is a pillar of the progressive movement in Nigeria and an exemplary statesman whose unwavering commitment to good governance, true federalism, and public service has left an indelible mark on our nation’s history.“On behalf of ALLAH, I congratulate Baba Akande on his 86th birthday. I pray that Almighty continues to bless him with good health, strength, and peace so that his invaluable knowledge and example can keep guiding us toward the Nigeria of our dreams.”`,
       createdAt: "10, Oct, 2024",
       current: 10,
       total: 100,
@@ -50,8 +49,8 @@ const BlogProvider = ({ children }) => {
       img: blogImgFour,
       heading:
         "Agbaje Urges Better Education And Healthcare For Children, Lauds Tinubu’s Government For Student Loan Scheme",
-      paragraph:
-        "This is a random paragraph im trying to test lorem ipsum trying to test lorem ipsum trying to test lorem ipsum",
+      paragraph: `
+      A chieftain of the All Progressives Congress in Oyo State, Barrister Akeem Agbaje has urged government at all levels to take the education and healthcare of children as top priority. He gave the admonition in his message to commemorate the Children’s Day. “It is yet another Children’s Day celebration. While it is a time to celebrate our children, it is also time for us to reflect on how to make conscious effort to improve on things that matter to their development. The theme for this year’s children’s day makes the status of children clear. In our parlance, we call them the leaders of tomorrow and the only way we can ensure they are ready when tomorrow comes is by adequately preparing them. The investments we put in our future arw the ones we put in our children and I urge governments at all levels to prioritize the issues of education and health for children. We cannot desire a greater future and raise uneducated and unhealthy children. I laud the government of His Excellency, President Bola Ahmed Tinubu GCFR for the student loan scheme, it is one initiative that would go a long way in ensuring the younger generation enjoys quality education.”  `,
       createdAt: "10, Oct, 2024",
       current: 10,
       total: 100,

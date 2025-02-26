@@ -1,53 +1,3 @@
-// import React from "react";
-// import herobg from "../../assets/hero.png";
-// import ScrollIndicator from "./ScrollIndicator";
-// import { Linkedin, Twitter, Instagram } from "lucide-react";
-// import { PiTiktokLogoBold } from "react-icons/pi";
-
-// const Hero = () => {
-//   const socialLinks = [
-//     { icon: Linkedin, href: "https://linkedin.com" },
-//     { icon: Twitter, href: "https://twitter.com" },
-//     { icon: Instagram, href: "https://instagram.com" },
-//     { icon: PiTiktokLogoBold, href: "https://tiktok.com" },
-//   ];
-
-//   return (
-//     <div className="w-full h-screen bg-black/20 flex items-center justify-center pt-32 relative">
-//       <img
-//         src={herobg}
-//         alt=""
-//         className="absolute w-full h-[500px] object-contain"
-//       />
-//       <div className="relative font-bold text-6xl text-center text-orange-400">
-//         <h1>Hello,</h1>
-//         <h1>I'm Akeem Agbaje</h1>
-//         <h1 className="text-2xl font-semibold">
-//           Distinguished Legal Practitioner | Entrepreneur | Political Leader
-//         </h1>
-//       </div>
-//       <div className="flex items-center justify-center absolute bottom-4 w-full">
-//         <ScrollIndicator />
-//       </div>
-//       <div className="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-4">
-//         {socialLinks.map((social, index) => (
-//           <a
-//             key={index}
-//             href={social.href}
-//             target="_blank"
-//             rel="noopener noreferrer"
-//             className="text-white hover:text-yellow-500 transition-colors"
-//           >
-//             <social.icon className="h-8 w-8" />
-//           </a>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Hero;
-
 import React from "react";
 import heroImg from "../../assets/aaimg1.jpg";
 // import heroImg from "../../assets/agbaje-green.jpg";
@@ -117,13 +67,17 @@ const Hero = () => {
         </div>
       </div>
       {/* Image */}
-      <div className=" basis-1/2  size-[320px] lg:size-[500px] pb-">
+      <div className="basis-1/2 w-full aspect-[4/5] md:aspect-[3/3] relative">
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/10 rounded-lg z-10"></div>
+
         <img
           src={heroImg}
           alt=""
-          className=" w-full h-auto min-h-96 object-cover rounded-2xl"
+          className="rounded-lg w-full h-full object-cover object-top shadow-md"
         />
       </div>
+
       <div className="flex items-center justify-center absolute bottom-4 w-full z-10">
         {/* <ScrollIndicator /> */}
       </div>

@@ -2,30 +2,13 @@
 import { motion } from "framer-motion";
 // import { Card } from "@/components/ui/card";
 import { Award, Briefcase, Users, GraduationCap } from "lucide-react";
-import img from "../assets/aaimg1.jpg";
+import img from "../assets/aaimg9.jpg";
+import AwardsSection from "../components/About/AwardSection";
+import AwardsTimeline from "../components/About/AwardsTimeline";
+// import AwardsSection from "./AwardsSection"; // Import the new component
 
 const About = () => {
   const achievements = [
-    // {
-    //   icon: Briefcase,
-    //   value: "15+",
-    //   label: "Years Experience",
-    // },
-    // {
-    //   icon: Users,
-    //   value: "1000+",
-    //   label: "Clients Served",
-    // },
-    // {
-    //   icon: Award,
-    //   value: "50+",
-    //   label: "Major Cases Won",
-    // },
-    // // {
-    // //   icon: GraduationCap,
-    // //   value: "20+",
-    // //   label: "Legal Publications",
-    // // },
     {
       icon: Briefcase,
       value: "Legal practitioner",
@@ -42,7 +25,7 @@ const About = () => {
       icon: Award,
       value: "Political Leader",
       label:
-        "A key player in Oyo State politics, a gubernatorial aspirant for the All Progressives Congress (APC) in both 2019 and 2023. He also served as the Oyo State secretary of the Tinubu/Shettima Grassroots Independent Campaign Council.",
+        "A key player in Oyo State politics, a gubernatorial aspirant for the All Progressives Congress (APC) in both 2019 and 2023. He also served as the Oyo State secretary of the Tinubu/Shettima Grassroots Independent Campaign Council.",
     },
   ];
 
@@ -52,7 +35,7 @@ const About = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className=" mx-auto px-2 xs:px-6 2xs:px-8 sm:px-8 md:px-12 lg:px-20 xl:px-32 pt-32">
+      <div className="mx-auto px-2 xs:px-6 2xs:px-8 sm:px-8 md:px-12 lg:px-20 xl:px-32 pt-32">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row gap-12 items-center mb-16">
             <div className="flex-1">
@@ -83,18 +66,18 @@ const About = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4 }}
             >
-              <div className="  w-full h-[600px]">
+              <div className="w-full aspect-[3/3]">
                 <img
                   src={img}
                   alt="Babajide Ogunjobi"
-                  className="rounded-lg h-full w-full object-cover"
+                  className="rounded-lg w-full h-full object-cover object-top"
                 />
               </div>
             </motion.div>
           </div>
 
           <motion.div
-            className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
@@ -108,7 +91,7 @@ const About = () => {
                 <div className="text-xl font-semibold mb-2">
                   {achievement.value}
                 </div>
-                <div className=" text-gray-600">{achievement.label}</div>
+                <div className="text-gray-600">{achievement.label}</div>
               </div>
             ))}
           </motion.div>
@@ -117,7 +100,7 @@ const About = () => {
             <motion.section
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
+              transition={{ delay: 0.8 }}
             >
               <h2 className="text-2xl font-semibold mb-4">Background</h2>
               <p className="text-muted-foreground">
@@ -133,48 +116,11 @@ const About = () => {
               </p>
             </motion.section>
 
-            {/* <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 }}
-            >
-              <h2 className="text-2xl font-semibold mb-4">Education</h2>
-              <ul className="space-y-4 text-muted-foreground">
-                <li>
-                  <strong>Nigerian Law School</strong>
-                  <br />
-                  Barrister at Law (BL), First Class Honours
-                </li>
-                <li>
-                  <strong>University of Lagos</strong>
-                  <br />
-                  Bachelor of Laws (LL.B), First Class Honours
-                </li>
-                <li>
-                  <strong>Harvard Law School</strong>
-                  <br />
-                  Master of Laws (LL.M), International Law
-                </li>
-              </ul>
-            </motion.section>
+            {/* Added Awards Section here */}
+            {/* <AwardsSection /> */}
+            <AwardsTimeline />
 
-            <motion.section
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 }}
-            >
-              <h2 className="text-2xl font-semibold mb-4">
-                Areas of Expertise
-              </h2>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>Constitutional Law</li>
-                <li>Legislative Affairs</li>
-                <li>Corporate Law</li>
-                <li>Environmental Law</li>
-                <li>Human Rights Advocacy</li>
-                <li>Public Policy Development</li>
-              </ul>
-            </motion.section> */}
+            {/* Commented sections remained commented as in original */}
           </div>
         </div>
       </div>
