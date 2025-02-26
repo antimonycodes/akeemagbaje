@@ -43,7 +43,7 @@ const Nav = () => {
   };
 
   return (
-    <div className="fixed top-4 w-full z-[999] px-4">
+    <div className="fixed top-4 w-full z-[999] px-4 ">
       <div className="rounded-3xl shadow-2xl py-1 bg-blackl/20 bg-white backdrop-blur-3xl max-w-7xl mx-auto">
         <div className="flex justify-between items-center py-4 px-6 md:px-24">
           {/* logo */}
@@ -80,9 +80,9 @@ const Nav = () => {
                   onClick={() => handleNavClick(link.path)}
                 >
                   {link.name}
-                  {isActive(link.path) && (
+                  {/* {isActive(link.path) && (
                     <span className="ml-2 inline-block w-2 h-2 bg-support rounded-full"></span>
-                  )}
+                  )} */}
                 </ScrollLink>
               ) : (
                 <Link
@@ -96,9 +96,9 @@ const Nav = () => {
                   onClick={() => handleNavClick(link.path)}
                 >
                   {link.name}
-                  {isActive(link.path) && (
+                  {/* {isActive(link.path) && (
                     <span className="ml-2 inline-block w-2 h-2 bg-support rounded-full"></span>
-                  )}
+                  )} */}
                 </Link>
               )
             )}
@@ -115,7 +115,7 @@ const Nav = () => {
       </div>
       {/* mobile menu */}
       <motion.div
-        className="fixed top-0 left-0 w-full h-full bg-white z-50 flex flex-col items-center justify-center"
+        className="fixed top-0 left-0 w-full h-full bg-primary z-50 flex flex-col items-center justify-center"
         initial="closed"
         animate={isOpen ? "open" : "closed"}
         variants={menuVariants}
@@ -140,9 +140,9 @@ const Nav = () => {
               onClick={() => handleNavClick(link.path)}
             >
               {link.name}
-              {isActive(link.path) && (
+              {/* {isActive(link.path) && (
                 <span className="ml-2 inline-block w-2 h-2 bg-support rounded-full"></span>
-              )}
+              )} */}
             </ScrollLink>
           ) : (
             <Link
@@ -154,9 +154,9 @@ const Nav = () => {
               onClick={() => handleNavClick(link.path)}
             >
               {link.name}
-              {isActive(link.path) && (
+              {/* {isActive(link.path) && (
                 <span className="ml-2 inline-block w-2 h-2 bg-support rounded-full"></span>
-              )}
+              )} */}
             </Link>
           )
         )}

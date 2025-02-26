@@ -17,7 +17,7 @@ const Blog = () => {
   };
 
   return (
-    <div className="px-4 md:px-32 py-6 lg:py-24 mb-6">
+    <div className="px-2 xs:px-6 2xs:px-8 sm:px-8 md:px-12 lg:px-20 xl:px-32 py-6 lg:py-24 mb-6">
       <div className="flex items-center flex-col justify-center">
         <h1 className="text-2xl md:text-3xl font-medium text-center text-black">
           Blog
@@ -29,7 +29,7 @@ const Blog = () => {
         {blogs.slice(0, 4).map((blog, i) => (
           <div
             key={i}
-            className="p-6 rounded-lg bg-white w-full flex flex-col gap-4 hover:shadow-lg hover:-translate-y-2.5 duration-500 transition-all"
+            className="p-2 rounded-lg bg-white w-full flex flex-col gap-4 shadow-lg hover:-translate-y-2.5 duration-500 transition-all"
           >
             <img
               src={blog.img}
@@ -63,7 +63,8 @@ const Blog = () => {
 
       <div className="flex justify-center mt-8">
         <button
-          className="py-2 px-6 rounded-lg bg-secondary text-white font-semibold cursor-pointer"
+          className="py-2 px-6 rounded-lg bg-[#811812] text-white font-semibold cursor-pointer transition-all duration-300 
+ ease-linear delay-0  hover:translate-y-[-7px] active:translate-y-[-1px]"
           onClick={handleReadMoreBlogs}
         >
           Read More Blogs

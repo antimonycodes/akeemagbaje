@@ -15,7 +15,7 @@ const Blog = () => {
   };
 
   return (
-    <div className=" max-w-7xl px-4 mx-auto py-4 mt-28">
+    <div className="  px-2 xs:px-6 2xs:px-8 sm:px-8 md:px-12 lg:px-20 xl:px-32 mx-auto py-4 mt-28">
       <Breadcrumbs />
 
       {blogs.length > 0 && <BlogHeader blogs={blogs} />}
@@ -24,7 +24,7 @@ const Blog = () => {
         {blogs.map((blog, i) => (
           <div
             key={i}
-            className="p-1 hover:bg-white ease-in-out w-full flex flex-col gap-4 rounded-2xl hover:shadow-md hover:-translate-y-2.5 duration-500 transition-all"
+            className="p-1 hover:bg-white  w-full flex flex-col gap-4 rounded-2xl hover:shadow-md hover:-translate-y-2.5 duration-500 transition-all"
           >
             <div className=" h-48 w-full">
               <img

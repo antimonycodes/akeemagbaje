@@ -42,7 +42,7 @@ const Testimonial = () => {
   };
 
   return (
-    <div className=" relati py-12 px-4 md:px-32">
+    <div className=" relati py-12 px-2 xs:px-6 2xs:px-8 sm:px-8 md:px-12 lg:px-20 xl:px-32">
       <div className="  flex flex-col items-center justify-center pb-12">
         <h3 className=" text-2xl lg:text-3xl text-black font-bold">
           Testimonials

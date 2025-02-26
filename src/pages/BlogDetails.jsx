@@ -10,7 +10,7 @@ const BlogDetails = () => {
 
   return (
     <div className=" bg-gray-100 py-24">
-      <div className="px-4 md:px-24 py-4 mb-16 mt-12 ">
+      <div className="px-2 xs:px-6 2xs:px-8 sm:px-8 md:px-12 lg:px-20 xl:px-32 py-4 mb-16 mt-12 ">
         <div className=" px- md:px-24">
           <Breadcrumbs />
         </div>

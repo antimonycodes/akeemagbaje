@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 
 const Newsletter = () => {
   return (
-    <section className="relative mx-4 -bottom-32 mx-auto max-w-7xl py-6 lg:py-20 px-4 md:px-24 rounded-2xl bg-secondary text-white">
+    <section className="relative  -bottom-32 mx-auto max-w-7xl py-6 lg:py-20 px-4 md:px-2 rounded-2xl bg-secondary text-white">
       <div className="flex flex-col md:flex-row justify-between items-center px-4">
-        <div className="md:basis-[50%] mb-8 md:mb-0">
+        <div className="md:basis-[50%] mb-8 md:mb-0 text-center md:text-left">
           <motion.h2
             className="text-2xl md:text-3xl font-bold mb-4"
             initial={{ opacity: 0, y: 20 }}

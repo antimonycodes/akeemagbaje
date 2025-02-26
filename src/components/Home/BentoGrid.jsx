@@ -162,7 +162,7 @@ import imgEight from "../../assets/image15.jpeg";
 
 const BentoGrid = () => {
   return (
-    <div className="max-w-full px-4 md:px-32 py-6 md:py-24">
+    <div className="max-w-full px-2 xs:px-6 2xs:px-8 sm:px-8 md:px-12 lg:px-20 xl:px-32">
       <div className="flex items-center justify-center">
         <div>
           <h1 className="text-2xl md:text-3xl font-medium text-center text-black">
@@ -174,14 +174,17 @@ const BentoGrid = () => {
       <div className="mx-auto px- py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {/* Large Image */}
-          <div className="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group">
+          <div className="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group ">
             <img
               src={imgOne}
               alt="Main Image"
               className="w-full h-[400px] object-cover"
             />
-            <div className="absolute inset-0  bg-opacity-40 flex items-end p-4">
-              <p className="text-white">Dinner with co-workers</p>
+            <div class="transition-height absolute bottom-0 h-10 w-full overflow-hidden bg-[#00000080] p-2.5 text-white shadow-[0_3px_10px_#00000033] duration-500 ease-in-out group-hover:h-28">
+              <label class="font-bold">Title</label>
+              <p class="mt-[11px] text-sm">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit.
+              </p>
             </div>
           </div>
 

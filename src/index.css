@@ -7,6 +7,9 @@
   --color-primary: #c8a549;
   --color-secondary: #811812;
   --color-support: #186144;
+  --breakpoint-xs: 373px;
+  --breakpoint-2xs: 420px;
+  --breakpoint-3xl: 120rem;
 }
 
 .text-stroke {

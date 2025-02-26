@@ -49,7 +49,7 @@
 // export default Hero;
 
 import React from "react";
-import heroImg from "../../assets/white-agbada.jpg";
+import heroImg from "../../assets/aaimg1.jpg";
 // import heroImg from "../../assets/agbaje-green.jpg";
 
 import ScrollIndicator from "./ScrollIndicator";
@@ -65,7 +65,7 @@ const Hero = () => {
   ];
 
   return (
-    <div className="w-full h-scree  bg-black/20 flex flex-col md:flex-row items-center justify-between gap-24 px-6 lg:px-32 pt-28 pb-12 relative overflow-hidden">
+    <div className="w-full h-full  bg-black/20 flex flex-col md:flex-row items-center justify-between gap-24 px-2 xs:px-6 sm:px-8 md:px-12 lg:px-20 xl:px-32 pt-28 pb-12 relative overflow-hidden">
       {/* <img
         src={herobg}
         alt=""
@@ -117,11 +117,11 @@ const Hero = () => {
         </div>
       </div>
       {/* Image */}
-      <div className=" size-[320px] lg:size-[500px] pb-">
+      <div className=" basis-1/2  size-[320px] lg:size-[500px] pb-">
         <img
           src={heroImg}
           alt=""
-          className=" w-full h-full object-cover rounded-2xl"
+          className=" w-full h-auto min-h-96 object-cover rounded-2xl"
         />
       </div>
       <div className="flex items-center justify-center absolute bottom-4 w-full z-10">

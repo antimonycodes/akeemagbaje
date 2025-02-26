@@ -28,7 +28,7 @@ const Services = () => {
   return (
     <div>
       <section className="  bg-gray-100 py-24">
-        <div className=" px-4 lg:px-32">
+        <div className="px-2 xs:px-6 2xs:px-8 sm:px-8 md:px-12 lg:px-20 xl:px-32">
           <div className=" text-center flex items-center justify-center">
             <div>
               <h1 className=" text-3xl font-bold text-center">Services</h1>
