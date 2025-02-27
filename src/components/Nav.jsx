@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import logo from "../assets/agbaje-logo-design-no-bg.png";
+import cvPdf from "../assets/file/AKEEM-AGBAJE-CV.pdf";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -105,9 +106,10 @@ const Nav = () => {
           </div>
           {/* download CV button */}
           <a
-            href="/cv.pdf"
-            download
-            className="hidden md:block borde py-1 px-3 rounded-lg bg-secondary text-white font-semibold"
+            href={cvPdf} // Use the imported CV file path
+            download="Akeem_Agbaje_CV.pdf" // Specify the filename for download
+            className="hidden md:block borde py-2 px-4 rounded-lg bg-secondary hover:bg-[#600F0B]  text-white text-sm font-medium  transition-all duration-300 
+ ease-linear delay-0  hover:translate-y-[-7px] active:translate-y-[-1px]"
           >
             Download CV
           </a>
@@ -161,8 +163,8 @@ const Nav = () => {
           )
         )}
         <a
-          href="/cv.pdf"
-          download
+          href={cvPdf} // Use the imported CV file path
+          download="Akeem_Agbaje_CV.pdf" // Specify the filename for download
           className="borde py-2 px-4 rounded-lg bg-secondary text-white font-semibold"
           onClick={() => setIsOpen(false)}
         >

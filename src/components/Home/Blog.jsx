@@ -31,11 +31,13 @@ const Blog = () => {
             key={i}
             className="p-2 rounded-lg bg-white w-full flex flex-col gap-4 shadow-lg hover:-translate-y-2.5 duration-500 transition-all"
           >
-            <img
-              src={blog.img}
-              alt={blog.heading}
-              className="object-cover rounded-lg h-48 w-full"
-            />
+            <div className=" h-62 w-full">
+              <img
+                src={blog.img}
+                alt={blog.heading}
+                className="rounded-2xl object-top object-cover h-full w-full"
+              />
+            </div>
             <div className="flex flex-col flex-1 px-1 py- pb-6">
               <div className="flex gap-3 mb-4">
                 <div className="bg-primary h-full w-1.5"></div>

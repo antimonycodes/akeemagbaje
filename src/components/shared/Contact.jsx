@@ -44,7 +44,10 @@ const Contact = () => {
                 className="bg-transparent p-4 rounded-md text-black border border-[#A8A8A8] placeholder:text-[#A8A8A8] caret-colored h-[156px]"
               />
             </div>
-            <button className="bg-secondary transition-all duration-700 ease-in-out  py-[12px] px-[41px] rounded-lg text-white w-fit font-medium">
+            <button
+              className=" bg-secondary hover:bg-[#600F0B]  text-white text-sm font-medium  transition-all duration-300 
+ ease-linear delay-0  hover:translate-y-[-7px] active:translate-y-[-1px] w-fit py-2 px-4 rounded-lg cursor-pointer"
+            >
               Submit Now
             </button>
           </form>

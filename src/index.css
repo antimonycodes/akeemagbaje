@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
 @import "tailwindcss";
 
 @theme {
   --font-roboto: "Roboto", sans-serif;
+  --font-lobster: "Lobster";
   --color-primary: #c8a549;
   --color-secondary: #811812;
   --color-support: #186144;
@@ -125,3 +128,214 @@
   -webkit-backdrop-filter: blur(3px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 } */
+
+.card4-button {
+  position: relative;
+  cursor: pointer;
+  /* width: ; */
+  margin-top: 40px;
+  padding: 9px 16px;
+  border: none;
+  overflow: hidden;
+  font-size: 16px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+  transition: box-shadow 0.1s ease-in;
+  background-color: transparent;
+  color: #811812;
+  border: 1px solid #811812;
+}
+
+.card4-button:active {
+  box-shadow: 0px 0px 15px rgba(0, 119, 255, 0.5);
+}
+
+.card4-button:hover::before {
+  animation: card4-animation2 0.4s 1;
+}
+
+.card4-button::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-99%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: "Read more";
+  color: white;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: #811812;
+  background: linear-gradient(90deg, #811812, #811812, #811812, #811812);
+  animation: card4-animation1 10s infinite;
+}
+
+.card4-button:hover::before {
+  transform: translateX(0%);
+}
+
+@keyframes card4-animation1 {
+  0% {
+    transform: translateX(-99%);
+  }
+
+  25% {
+    transform: translateX(-90%);
+  }
+
+  50% {
+    transform: translateX(-80%);
+  }
+
+  75% {
+    transform: translateX(-95%);
+  }
+
+  100% {
+    transform: translateX(-99%);
+  }
+}
+
+@keyframes card4-animation2 {
+  to {
+    transform: translateX(-1%);
+  }
+
+  from {
+    transform: translateX(-99%);
+  }
+}
+
+/* pre loader */
+:root {
+  --circle-outline: #186144;
+}
+
+.site-teaser span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem 1rem;
+  /* color: var(--circle-outline); */
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  font-weight: bolder;
+  font-style: italic;
+}
+/* .site-teaser img {
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  left: 50%;
+  padding: 0.5rem 1rem;
+  color: var(--circle-outline);
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  font-weight: bolder;
+  font-style: italic;
+} */
+
+/* .site-teaser img {
+  position: relative;
+  left: 0;
+} */
+
+@media (min-width: 768px) {
+  .site-teaser span {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-teaser span {
+    padding: 2rem 4rem;
+  }
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background: none;
+  border: 1px solid var(--circle-outline);
+}
+
+.circle-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.circle-inner-rotator {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  width: 40%;
+  height: 40%;
+  border-radius: 100%;
+  background: none;
+  border: 1px solid var(--circle-outline);
+}
+
+.block {
+  position: absolute;
+  top: -25%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  display: none;
+  background: none;
+  border: 1px solid var(--circle-outline);
+  transform-origin: bottom;
+  transform: translateX(-50%);
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.container h1 {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: clamp(3rem, 10vw, 7.5rem);
+  letter-spacing: clamp(-0.25rem, -0.5vw, -0.5rem);
+}
+
+.container h1 span {
+  font-style: italic;
+}
+
+/* Media queries for responsive adjustments */
+@media (max-width: 767px) {
+  .counter {
+    font-size: 2rem !important;
+  }
+
+  .block {
+    top: -50px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .counter {
+    font-size: 4rem !important;
+  }
+
+  .block {
+    top: -75px;
+  }
+}

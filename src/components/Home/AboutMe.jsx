@@ -51,7 +51,7 @@ const AboutMe = () => {
             ))}
         </motion.h3>
         <Link to="/about">
-          <button className="bg-secondary border flex items-center gap-2 text-sm font-semibold text-white px-4 py-2 rounded-lg mt-4 cursor-pointer">
+          <button className="card4-button bg-secondary border flex items-center gap-2 text-sm font-semibold text-white px-4 py-2 rounded-lg mt-4 cursor-pointer ">
             Read More
             <span>
               <ArrowRight size={14} />

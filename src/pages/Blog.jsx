@@ -24,13 +24,13 @@ const Blog = () => {
         {blogs.map((blog, i) => (
           <div
             key={i}
-            className="p-1 hover:bg-white  w-full flex flex-col gap-4 rounded-2xl shadow-lg hover:-translate-y-2.5 duration-500 transition-all"
+            className=" group p-2 hover:bg-white  w-full flex flex-col gap-4 rounded-2xl shadow-lg hover:-translate-y-2.5 duration-500 transition-all"
           >
             <div className=" h-62 w-full">
               <img
                 src={blog.img}
                 alt={blog.heading}
-                className="rounded-2xl object-top object-cover h-full w-full"
+                className="rounded-2xl object-top object-cover h-full w-full "
               />
             </div>
             <div className="flex flex-col flex-1 px-1 py- pb-6">
