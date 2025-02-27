@@ -53,11 +53,14 @@ const About = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                As a Senior Advocate of Nigeria and Federal Representative, I've
-                dedicated my career to upholding justice and representing the
-                interests of our great nation. My journey in law and public
-                service has been driven by a commitment to positive change and
-                national development.
+                As a dedicated legal practitioner and advocate for justice, I
+                have committed my career to upholding the rule of law and
+                promoting national development. With years of experience in
+                legal practice and public service, I have worked tirelessly to
+                ensure fairness, protect fundamental rights, and contribute to
+                policies that drive positive change in our society. My passion
+                for justice and governance continues to shape my efforts in
+                fostering a more just and equitable Nigeria.
               </motion.p>
             </div>
             <motion.div

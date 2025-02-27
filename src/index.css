@@ -210,7 +210,7 @@
 
 /* pre loader */
 :root {
-  --circle-outline: #186144;
+  --circle-outline: white;
 }
 
 .site-teaser span {

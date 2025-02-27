@@ -13,7 +13,7 @@ import BentoGrid from "../components/Home/BentoGrid";
 
 const Index = () => {
   return (
-    <div className=" bg-gray-100">
+    <div className=" bg-gray-100 h-full">
       <Hero />
       <AboutMe />
       <Services />
@@ -26,7 +26,7 @@ const Index = () => {
       <div id="contact">
         <Contact />
       </div>
-      <Newsletter />
+      {/* <Newsletter /> */}
     </div>
   );
 };

@@ -19,7 +19,7 @@ const Preloader = ({ onComplete }) => {
         }
 
         // Increase by larger increments to reach 100% faster
-        currentValue += Math.floor(Math.random() * 15) + 10;
+        currentValue += Math.floor(Math.random() * 5) + 5;
         if (currentValue > 100) {
           currentValue = 100;
         }
@@ -115,7 +115,7 @@ const Preloader = ({ onComplete }) => {
         >
           0%
         </h1>
-        <div className="site-teaser absolute top-0 right-0 text-white p-2 md:p-4">
+        <div className="site-teaser absolute top-0 right-0 text-secondary p-2 md:p-4">
           <span>Akeem Agbaje</span>
         </div>
         {/* circles */}

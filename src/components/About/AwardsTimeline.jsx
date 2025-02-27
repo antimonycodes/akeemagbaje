@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { Award, Calendar } from "lucide-react";
 import img from "../../assets/image6.jpeg";
 import manowaImg from "../../assets/image7.jpeg";
@@ -66,55 +66,64 @@ const AwardsTimeline = () => {
       <div className="relative">
         <div className="absolute left-0 md:left-1/2 h-full w-0.5 bg-support transform -translate-x-1/2"></div>
 
-        {awards.map((award, index) => (
-          <div key={index} className="mb-16 relative">
-            <div
-              className={`flex flex-col md:flex-row ${
-                index % 2 === 0 ? "md:flex-row-reverse" : ""
-              }`}
-            >
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 0.8 + index * 0.2 }}
-                className="absolute left-0 md:left-1/2 w-10 h-10 bg-white border-4 border-support rounded-full flex items-center justify-center transform -translate-x-1/2 z-10"
-              >
-                <Calendar className="w-4 h-4 text-support" />
-              </motion.div>
+        {awards.map((award, index) => {
+          const ref = useRef(null);
+          const isInView = useInView(ref, { once: true, margin: "-50px 0px" });
 
-              <motion.div
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.9 + index * 0.2 }}
-                className={`md:w-5/12 ${
-                  index % 2 === 0
-                    ? "md:mr-auto pl-4 md:pl-0 md:pr-12"
-                    : "md:ml-auto pl-4 md:pl-12"
+          return (
+            <motion.div
+              ref={ref}
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              className="mb-16 relative"
+            >
+              <div
+                className={`flex flex-col md:flex-row ${
+                  index % 2 === 0 ? "md:flex-row-reverse" : ""
                 }`}
               >
-                <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-semibold">{award.title}</h3>
-                    {/* <span className="bg-secondary text-white font-bold py-1 px-3 rounded-full text-sm">
-                      {award.year}
-                    </span> */}
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={isInView ? { scale: 1 } : {}}
+                  transition={{ delay: 0.3 + index * 0.2 }}
+                  className="absolute left-0 md:left-1/2 w-10 h-10 bg-white border-4 border-support rounded-full flex items-center justify-center transform -translate-x-1/2 z-10"
+                >
+                  <Calendar className="w-4 h-4 text-support" />
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.6, delay: 0.5 + index * 0.2 }}
+                  className={`md:w-5/12 ${
+                    index % 2 === 0
+                      ? "md:mr-auto pl-4 md:pl-0 md:pr-12"
+                      : "md:ml-auto pl-4 md:pl-12"
+                  }`}
+                >
+                  <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="text-xl font-semibold">{award.title}</h3>
+                    </div>
+                    <p className="text-sm text-gray-500 mb-3">
+                      {award.organization}
+                    </p>
+                    <div className="mb-4">
+                      <img
+                        src={award.image}
+                        alt={award.title}
+                        className="w-full h-56 object-cover rounded-lg"
+                      />
+                    </div>
+                    <p className="text-gray-600">{award.description}</p>
                   </div>
-                  <p className="text-sm text-gray-500 mb-3">
-                    {award.organization}
-                  </p>
-                  <div className="mb-4">
-                    <img
-                      src={award.image}
-                      alt={award.title}
-                      className="w-full h-48 object-cover rounded-lg"
-                    />
-                  </div>
-                  <p className="text-gray-600">{award.description}</p>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        ))}
+                </motion.div>
+              </div>
+            </motion.div>
+          );
+        })}
       </div>
     </motion.section>
   );

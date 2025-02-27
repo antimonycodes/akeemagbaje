@@ -8,6 +8,7 @@ import BlogDetails from "./pages/BlogDetails";
 import Blog from "./pages/Blog";
 import { useEffect, useState } from "react";
 import Preloader from "./components/shared/Preloader";
+import Newsletter from "./components/shared/Newsletter";
 
 function App() {
   const location = useLocation();
@@ -51,6 +52,7 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogDetails />} />
           </Routes>
+          <Newsletter />
           <Footer />
         </>
       )}
