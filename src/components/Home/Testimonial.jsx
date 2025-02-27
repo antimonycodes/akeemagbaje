@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaQuoteLeft, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import img from "../../assets/image1.jpeg";
-import imgTwo from "../../assets/image13.jpeg";
+import imgTwo from "../../assets/image10(1).jpeg";
 import shape from "../../assets/shape.svg";
 
 const testimonials = [

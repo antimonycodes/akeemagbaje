@@ -40,7 +40,7 @@ const About = () => {
           <div className="flex flex-col md:flex-row gap-12 items-center mb-16">
             <div className="flex-1">
               <motion.h1
-                className="text-4xl font-bold mb-6"
+                className="text-2xl font-bold mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
@@ -87,7 +87,7 @@ const About = () => {
                 key={index}
                 className="p-6 text-left bg-white rounded-2xl shadow-lg"
               >
-                <achievement.icon className="w-12 h-12 mx-aut mb-4 text-yellow-400" />
+                <achievement.icon className="w-12 h-12 mx-aut mb-4 text-primary" />
                 <div className="text-xl font-semibold mb-2">
                   {achievement.value}
                 </div>
