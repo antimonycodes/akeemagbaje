@@ -28,7 +28,7 @@ const AboutMe = () => {
   };
 
   return (
-    <div className="px-2 xs:px-6 2xs:px-8 sm:px-8 md:px-12 lg:px-20 xl:px-32 py-12 flex flex-col gap-12 md:gap-0 md:flex-row items-center justify-between w-full bg-gray-100">
+    <div className="px-4 xs:px-6 2xs:px-8 sm:px-8 md:px-12 lg:px-20 xl:px-32 py-12 flex flex-col gap-12 md:gap-0 md:flex-row items-center justify-between w-full bg-gray-100">
       {/* content */}
       <div className="mb-8 md:mb-0 md:w-1/2">
         <div className=" flex flex-col items-center md:items-start justify-center">
