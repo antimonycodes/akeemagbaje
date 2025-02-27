@@ -255,7 +255,7 @@ const BentoGrid = () => {
 
   return (
     <>
-      <div className="flex items-center justify-center py-8">
+      <div className="flex items-center justify-center py-12">
         <div>
           <h1 className="text-2xl md:text-3xl font-medium text-center text-black">
             Gallery
