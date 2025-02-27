@@ -8,10 +8,19 @@ import { PiTiktokLogoBold } from "react-icons/pi";
 
 const Hero = () => {
   const socialLinks = [
-    { icon: Facebook, href: "https://facebook.com/Barrister Akeem Agbaje" },
-    { icon: Twitter, href: "https://twitter.com/AkeemAAgbaje" },
-    { icon: Instagram, href: "https://instagram.com/akeemaagbaje" },
-    { icon: PiTiktokLogoBold, href: "https://tiktok.com/akeemaagbaje" },
+    {
+      icon: Facebook,
+      href: "https://www.facebook.com/profile.php?id=100095293155758",
+    },
+    { icon: Twitter, href: "https://twitter.com/akeemaagbaje" },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/akeemaagbaje?igsh=MWw4b2EweTg4Y21iNg==",
+    },
+    {
+      icon: PiTiktokLogoBold,
+      href: "https://www.tiktok.com/@akeemaagbaje?_t=ZM-8uGRrQZp3rB&_r=1",
+    },
   ];
 
   return (
