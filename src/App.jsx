@@ -9,6 +9,7 @@ import Blog from "./pages/Blog";
 import { useEffect, useState } from "react";
 import Preloader from "./components/shared/Preloader";
 import Newsletter from "./components/shared/Newsletter";
+import ScrollToTop from "./components/shared/ScrollToTop";
 
 function App() {
   const location = useLocation();
@@ -46,6 +47,7 @@ function App() {
           <div>
             <Nav />
           </div>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
