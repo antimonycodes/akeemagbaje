@@ -34,7 +34,7 @@ const BlogHeader = ({ blogs }) => {
   };
 
   return (
-    <div className="relative rounded-3xl w-full h-[120vh] overflow-hidden">
+    <div className="relative rounded-3xl w-full h-[80vh] md:h-[120vh] overflow-hidden">
       {/* Current slide - Using direct image element with object-position:top */}
       <div
         className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
