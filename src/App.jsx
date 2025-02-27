@@ -12,52 +12,52 @@ import Newsletter from "./components/shared/Newsletter";
 import ScrollToTop from "./components/shared/ScrollToTop";
 
 function App() {
-  const location = useLocation();
-  const [isLoading, setIsLoading] = useState(true);
+  // const location = useLocation();
+  // const [isLoading, setIsLoading] = useState(true);
 
   // Handle smooth scrolling to hash links
-  useEffect(() => {
-    if (location.hash) {
-      const element = document.getElementById(location.hash.substring(1));
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }, [location]);
+  // useEffect(() => {
+  //   if (location.hash) {
+  //     const element = document.getElementById(location.hash.substring(1));
+  //     if (element) {
+  //       element.scrollIntoView({ behavior: "smooth" });
+  //     }
+  //   }
+  // }, [location]);
 
   // Add a backup timer to ensure preloader doesn't get stuck
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 5000); // Force hide after 5 seconds
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 5000); // Force hide after 5 seconds
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
-  const handlePreloaderComplete = () => {
-    setIsLoading(false);
-  };
+  // const handlePreloaderComplete = () => {
+  //   setIsLoading(false);
+  // };
 
   return (
     <div className="font-roboto">
-      {isLoading ? (
+      {/* {isLoading ? (
         <Preloader onComplete={handlePreloaderComplete} />
       ) : (
-        <>
-          <div>
-            <Nav />
-          </div>
-          <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:id" element={<BlogDetails />} />
-          </Routes>
-          <Newsletter />
-          <Footer />
-        </>
-      )}
+        <> */}
+      <div>
+        <Nav />
+      </div>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogDetails />} />
+      </Routes>
+      <Newsletter />
+      <Footer />
+      {/* </>
+      )} */}
     </div>
   );
 }
