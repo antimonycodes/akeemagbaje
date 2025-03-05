@@ -8,14 +8,8 @@ import imgFive from "../../assets/image0.jpeg";
 import imgSix from "../../assets/aaimg9.jpg";
 import imgSeven from "../../assets/image2.jpeg";
 import imgEight from "../../assets/aaimg7.jpg";
-import { useEffect, useState } from "react";
 
 const BentoGrid = () => {
-  const [activeSlide, setActiveSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [startX, setStartX] = useState(null);
-  const [isDragging, setIsDragging] = useState(false);
-
   const allImages = [
     img,
     imgOne,
@@ -25,66 +19,38 @@ const BentoGrid = () => {
     imgFive,
     imgSix,
     imgSeven,
-    imgEight,
+    // imgEight,
   ];
-
-  const moveToNext = () => {
-    setActiveSlide((prev) => (prev >= allImages.length - 1 ? 0 : prev + 1));
-  };
-
-  const moveToPrev = () => {
-    setActiveSlide((prev) => (prev <= 0 ? allImages.length - 1 : prev - 1));
-  };
-
-  useEffect(() => {
-    let interval;
-    if (isAutoPlaying) {
-      interval = setInterval(moveToNext, 3000);
-    }
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, activeSlide]);
-
-  const handleInteraction = () => {
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 5000);
-  };
 
   return (
     <>
+      {/* Header */}
       <div className="flex items-center justify-center py-12">
         <div>
           <h1 className="text-2xl md:text-3xl font-medium text-center text-black">
             Gallery
           </h1>
-          <img src={shape} alt="" width={150} />
+          <img src={shape} alt="decorative shape" width={150} />
         </div>
       </div>
 
-      {/* Mobile Slider */}
-      <div className="md:hidden px-4">
-        <div className="relative w-full h-[80vh] rounded-xl shadow-lg overflow-hidden">
-          {allImages.map((image, index) => (
-            <div
+      {/* Mobile Infinite Scroll Slider */}
+      <div className="md:hidden px-4 overflow-hidden relative">
+        <div className="flex w-max animate-scroll">
+          {[...allImages, ...allImages].map((image, index) => (
+            <img
               key={index}
-              className={`absolute inset-0 w-full h-full transition-all duration-300 ease-in-out ${
-                index === activeSlide
-                  ? "opacity-100 translate-x-0"
-                  : "opacity-0"
-              }`}
-            >
-              <img
-                src={image}
-                alt={`Gallery image ${index}`}
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
+              src={image}
+              alt={`Gallery image ${index}`}
+              className="w-48 h-60 object-cover rounded-lg mx-2"
+            />
           ))}
         </div>
       </div>
 
       {/* Desktop Bento Grid */}
       <div className="max-w-full px-2 xs:px-6 sm:px-8 md:px-12 lg:px-20 xl:px-32 hidden md:block">
-        <div className="mx-auto px- py-">
+        <div className="mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div className="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-lg">
               <img
@@ -93,65 +59,39 @@ const BentoGrid = () => {
                 className="w-full h-[500px] object-cover object-top"
               />
             </div>
-            <div className="relative overflow-hidden rounded-2xl shadow-lg">
-              <img
-                src={imgTwo}
-                alt="Image"
-                className="w-full h-72 md:h-60 object-cover object-top"
-              />
-            </div>
-            <div className="relative overflow-hidden rounded-2xl shadow-lg">
-              <img
-                src={imgThree}
-                alt="Image"
-                className="w-full h-72 md:h-60 object-cover object-top"
-              />
-            </div>
-            <div className="relative overflow-hidden rounded-2xl shadow-lg">
-              <img
-                src={imgFour}
-                alt="Image"
-                className="w-full h-72 md:h-60 object-cover object-top"
-              />
-            </div>
-            <div className="relative overflow-hidden rounded-2xl shadow-lg">
-              <img
-                src={imgFive}
-                alt="Image"
-                className="w-full h-72 md:h-60 object-cover object-top"
-              />
-            </div>
-            <div className="relative overflow-hidden rounded-2xl shadow-lg">
-              <img
-                src={imgSix}
-                alt="Image"
-                className="w-full h-72 md:h-60 object-cover object-top"
-              />
-            </div>
-            <div className="relative overflow-hidden rounded-2xl shadow-lg">
-              <img
-                src={imgSeven}
-                alt="Image"
-                className="w-full h-72 md:h-60 object-cover object-top"
-              />
-            </div>
-            <div className="relative overflow-hidden rounded-2xl shadow-lg">
-              <img
-                src={imgEight}
-                alt="Image"
-                className="w-full h-72 md:h-60 object-cover object-top"
-              />
-            </div>
-            <div className="relative overflow-hidden rounded-2xl shadow-lg">
-              <img
-                src={img}
-                alt="Image"
-                className="w-full h-72 md:h-60 object-cover object-top"
-              />
-            </div>
+            {allImages.map((image, index) => (
+              <div
+                key={index}
+                className="relative overflow-hidden rounded-2xl shadow-lg"
+              >
+                <img
+                  src={image}
+                  alt={`Gallery image ${index}`}
+                  className="w-full h-72 md:h-60 object-cover object-top"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
+
+      {/* Tailwind CSS Keyframe Animation */}
+      <style>
+        {`
+          @keyframes scroll {
+            from {
+              transform: translateX(0);
+            }
+            to {
+              transform: translateX(-50%);
+            }
+          }
+          .animate-scroll {
+            display: flex;
+            animation: scroll 20s linear infinite;
+          }
+        `}
+      </style>
     </>
   );
 };
