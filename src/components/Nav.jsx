@@ -45,8 +45,8 @@ const Nav = () => {
 
   return (
     <div className="fixed top-4 w-full z-[999] px-4 ">
-      <div className="rounded-3xl shadow-2xl py-1 bg-blackl/20 bg-white backdrop-blur-3xl max-w-7xl mx-auto">
-        <div className="flex justify-between items-center py-3 px-6 md:px-24">
+      <div className="rounded-3xl shadow-2xl py-1 bg-blackl/20 bg-white backdrop-blur-3xl max-w-6xl mx-auto">
+        <div className="flex justify-between items-center py-3 px-6 md:px-18">
           {/* logo */}
           <Link to="/">
             <div className="text-xl font-bold flex flexcol items-center gap-1">

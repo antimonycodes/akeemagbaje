@@ -17,7 +17,7 @@ const Blog = () => {
   };
 
   return (
-    <div className="px-2 xs:px-6 2xs:px-8 sm:px-8 md:px-12 lg:px-20 xl:px-32 py-6 lg:py-24 mb-6">
+    <div className="px-2 xs:px-6 2xs:px-8 sm:px-8 md:px-12 lg:px-20 xl:px-32 py-6 lg:py-12 ">
       <div className="flex items-center flex-col justify-center">
         <h1 className="text-2xl md:text-3xl font-medium text-center text-black">
           Blog

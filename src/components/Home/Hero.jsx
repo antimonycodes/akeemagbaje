@@ -24,7 +24,7 @@ const Hero = () => {
   ];
 
   return (
-    <div className="w-full h-full  bg-black/20 flex flex-col md:flex-row items-center justify-between gap-12 px-4 xs:px-6 sm:px-8 md:px-12 lg:px-20 xl:px-32 pt-12 pb-12 relative overflow-hidden">
+    <div className="w-full h-full  bg-black/20 flex flex-col md:flex-row items-center justify-between gap-12 px-4 xs:px-6 sm:px-8 md:px-12 lg:px-20 xl:px-32 pt-12 md:pt-24 pb-12 relative overflow-hidden">
       {/* <img
         src={herobg}
         alt=""
